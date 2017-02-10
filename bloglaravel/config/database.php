@@ -46,12 +46,12 @@ return [
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'unix_socket' => env('MAC_UNIX_SOCKET'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
             'strict' => true,
             'engine' => null,
-            'unix_socket' => env('MAC_UNIX_SOCKET'),
         ],
 
         'pgsql' => [

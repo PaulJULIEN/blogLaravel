@@ -24,9 +24,9 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 });
 
 $factory->define(App\Article::class, function (Faker\Generator $faker) {
-
     return [
-        'title' => $faker->name,
-        'content' => $faker->words(20, true),
-        'user_id' => $faker->numberBetween(1, 20),];
+        'title' => $faker->company,
+        'content' => $faker->text(200),
+        'user_id' => $faker->numberBetween(1, 20),
+    ];
 });

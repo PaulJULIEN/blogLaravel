@@ -16,12 +16,15 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('/home', 'HomeController@index');
-
-Route::resource('/articles', 'ArticleController');
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/profile', function () {
-    return view('profile');
+Route::resource('/article', 'ArticleController');
+
+Route::get('/user', function() {
+    return view('user');
+});
+
+Route::get('/admin', function() {
+    return view('admin');
 });
