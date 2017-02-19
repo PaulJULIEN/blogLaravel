@@ -15,7 +15,6 @@
                           <hr>  @endforeach
                         </ul>
 
-
                         {{ $articles->links() }}
                     </div>
                 </div>

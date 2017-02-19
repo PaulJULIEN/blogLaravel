@@ -19,6 +19,7 @@ nav  li {
     font-size: 2.7em;
     transition:0.5s;
 
+
 }
 
 .panel-body p{
@@ -37,5 +38,43 @@ nav  li {
 
 .panel-body ul li a {
     float: right;
+
+}
+
+.panel-body ul li a:hover {
+    float: right;
+    font-style: italic;
+
+
+}
+
+.panel-body ul li:hover{
+    font-weight: bold;
+
+}
+
+
+.panel-body2{
+    text-align: center;
+}
+
+.panel-body .btn.btn-primary{
+
+    margin-left: 35%;
+    margin-right: 5%;
+    float: left;
+}
+
+.auth{
+    float: right;
+margin-bottom: 8%;
+}
+
+.bor{
+    border: 1px solid black;
+}
+
+.panel-heading{
+    text-align: center;
 }
 

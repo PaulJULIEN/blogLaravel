@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/article', 'ArticleController');
 
+
+
 Route::get('/user', function() {
     return view('user');
 });
@@ -30,4 +32,7 @@ Route::get('/admin', function() {
 });
 
 Route::resource('/comment', 'CommentController');
+
+Route::get('product/like/{id}', ['as' => 'product.like', 'uses' => 'LikeController@likeProduct']);
+Route::get('post/like/{id}', ['as' => 'post.like', 'uses' => 'LikeController@likePost']);
 
