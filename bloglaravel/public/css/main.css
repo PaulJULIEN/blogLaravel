@@ -1,0 +1,41 @@
+
+nav  li {
+    border-left: 1px black solid;
+    font-size: 1.3em;
+
+}
+
+.navbar-header{
+    height: 50px;
+
+}
+
+.navbar-brand{
+    font-size: 2.5em;
+
+}
+
+.navbar-brand:hover{
+    font-size: 2.7em;
+    transition:0.5s;
+
+}
+
+.panel-body p{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.panel-body img{
+    margin-left: 31%;
+    margin-top: 5%;
+}
+
+.panel-body ul li{
+ list-style-type: none;
+}
+
+.panel-body ul li a {
+    float: right;
+}
+

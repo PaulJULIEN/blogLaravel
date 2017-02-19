@@ -11,9 +11,10 @@
                     <div class="panel-body">
                         <ul>
                             @foreach($articles as $article)
-                                <li><a href="{{ route('article.show', $article->id) }}">{{ $article->title }}</a></li>
-                            @endforeach
+                                <li>{{ $article->title }} <a href="{{ route('article.show', $article->id) }}"> Voir l'article >>> </a></li>
+                          <hr>  @endforeach
                         </ul>
+
 
                         {{ $articles->links() }}
                     </div>

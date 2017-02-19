@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,8 +16,11 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        $comments = Comment::all();
+
+        return view('articles.index', compact('articles', 'comments'));
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +29,7 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -38,13 +42,14 @@ class CommentController extends Controller
     {
 
 
-        $comments = new Comment();
+        $comment = new Comment();
         $input = $request->input();
         $input['user_id'] = Auth::user()->id;
 
-        $comments
+        $comment
             ->fill($input)
             ->save();
+
 
         return redirect()->route('article.index')->with('success', 'Le commentaire a bien été ajouté');
 
@@ -59,7 +64,9 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
+        $comments = Comment::find($id);
+        return view('articles.show', compact('comments'));
+
     }
 
     /**

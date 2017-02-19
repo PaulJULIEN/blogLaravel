@@ -31,12 +31,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-
-
         return view('articles.create');
     }
-
-
 
     /**
      * Store a newly created resource in storage.
@@ -67,9 +63,7 @@ class ArticleController extends Controller
             ->fill($input)
             ->save();
 
-        return redirect()->route('article.index')->with('success', 'L\'article a bien été publié');
-
-
+        return redirect()->route('article.index')->with('success', 'L\'article a bien été publié');;
     }
 
     /**

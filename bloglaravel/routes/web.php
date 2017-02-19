@@ -30,3 +30,4 @@ Route::get('/admin', function() {
 });
 
 Route::resource('/comment', 'CommentController');
+
