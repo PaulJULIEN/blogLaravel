@@ -7,8 +7,11 @@
 
         <title>Laravel</title>
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+
 
         <!-- Styles -->
         <style>
@@ -65,7 +68,13 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+    @include('components.share', [
+        'url' => request()->fullUrl(),
+        'description' => 'This is really cool link',
+        'image' => 'http://placehold.it/300x300?text=Cool+link'
+    ])
+
+    <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
